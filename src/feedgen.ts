@@ -55,7 +55,7 @@ export async function genNewlyMintedFeed() {
         }
       : {};
 
-    const content = `<img alt="${objkt.title}" src="${displayImgUrl}" />`;
+    const content = `<p><img alt="${objkt.title}" src="${displayImgUrl}" /></p><pre>${objkt.description}</pre>`;
     feed.addItem({
       title: objkt.title,
       description: objkt.description,
