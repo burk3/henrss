@@ -5,21 +5,21 @@ const mkPizzaUrl = (ipfsUri: string) =>
   `https://pizza.ipfs.io/ipfs/${ipfsUri.split("/").pop()}`;
 
 export async function genNewlyMintedFeed() {
-  const objkts = await pollNewlyMinted(10);
+  const objkts = await pollNewlyMinted(25);
 
   const updated = new Date(objkts[0].timestamp);
   const feed = new Feed({
     title: "HEN OBJKTs",
     description: "Firehose feed of Hic et Nunc OBJKTs as they are minted.",
-    id: "https://henrss.tactilecact.us",
-    link: "htts://henrss.tactilecact.us",
+    id: "https://henrss.herokuapp.com",
+    link: "htts://henrss.herokuapp.com",
     language: "en",
     copyright: "All OBJKTs copyright their respective creators.",
     updated,
     feedLinks: {
-      json: "https://henrss.tactilecact.us/feed.json",
-      atom: "https://henrss.tactilecact.us/atom.xml",
-      rss: "https://henrss.tactilecact.us/feed.rss",
+      json: "https://henrss.herokuapp.com/newlyMinted/feed.json",
+      atom: "https://henrss.herokuapp.com/newlyMinted/atom.xml",
+      rss: "https://henrss.herokuapp.com/newlyMinted/feed.rss",
     },
   });
 
