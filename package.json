@@ -9,7 +9,9 @@
     "prestart": "npm run build",
     "start": "node ."
   },
-  "engines": { "node": "~16"},
+  "engines": {
+    "node": "~16"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
