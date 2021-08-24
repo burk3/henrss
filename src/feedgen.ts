@@ -2,7 +2,7 @@ import { Feed } from "feed";
 import { pollNewlyMinted } from "./hen";
 
 const mkPizzaUrl = (ipfsUri: string) =>
-  `https://pizza.ipfs.io/ipfs/${ipfsUri.split("/").pop()}`;
+  `https://ipfs.dns.pizza/ipfs/${ipfsUri.split("/").pop()}`;
 
 export async function genNewlyMintedFeed() {
   const objkts = await pollNewlyMinted(25);
